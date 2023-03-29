@@ -1,0 +1,19 @@
+ALGORITHM InsertionSort
+VAR
+Tab : ARRAY_OF INTEGER;
+i,j,k :INTEGER;
+BEGIN
+
+  FOR i FROM 1 TO Tab.length-1 STEP 1  DO
+    k:= Tab[i] //mémoriser l'élément courant
+    j:= i;    
+    WHILE ( (j>=0) and  (Tab[j-1]>k) ) DO
+          Tab[j]:=Tab[j-1];
+          j:=j-1
+    END_WHILE
+
+  Tab[j]:=k;
+  END_FOR          
+
+
+END
